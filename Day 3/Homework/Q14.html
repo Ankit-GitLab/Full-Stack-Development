@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers from 1 to 100</title>
+</head>
+<body>
+    <h2>Prime Numbers between 1 and 100 are:</h2>
+    <p id="output"></p>
+
+    <script>
+        let output = "";
+        
+        for (let num = 2; num <= 100; num++) {
+            let isPrime = true;
+
+            for (let i = 2; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                output += num + " ";
+            }
+        }
+
+        document.getElementById("output").innerText = output;
+    </script>
+</body>
+</html>

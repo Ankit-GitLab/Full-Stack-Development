@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Equation Solver</title>
+</head>
+<body>
+    <h2>Quadratic Equation: ax² + bx + c = 0</h2>
+    <script>
+        let a = Number(prompt("Enter a:"));
+        let b = Number(prompt("Enter b:"));
+        let c = Number(prompt("Enter c:"));
+
+        let d = b * b - 4 * a * c;
+
+        if (d > 0) {
+            let r1 = (-b + Math.sqrt(d)) / (2 * a);
+            let r2 = (-b - Math.sqrt(d)) / (2 * a);
+            alert("Two Real Roots:\n" + r1 + " and " + r2);
+        } else if (d == 0) {
+            let r = -b / (2 * a);
+            alert("One Real Root:\n" + r);
+        } else {
+            alert("No Real Roots");
+        }
+    </script>
+</body>
+</html>

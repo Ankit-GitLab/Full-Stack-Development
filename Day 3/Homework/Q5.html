@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Program to Swap Two Variables</title>
+</head>
+<body>
+    <h2>Swap Two Variables</h2>
+    <script>
+        let a = Number(prompt("Enter a number:"));
+        let b = Number(prompt("Enter b number:"));
+
+        alert("Before swap A --> " + a + " B --> " + b);
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        alert("After swap A --> " + a + " B --> " + b);
+    </script>
+</body>
+</html>

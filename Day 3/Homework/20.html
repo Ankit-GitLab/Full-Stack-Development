@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Armstrong Numbers in Interval</title>
+</head>
+<body>
+    <h2>Armstrong Numbers in an Interval</h2>
+
+    <script>
+        let start = parseInt(prompt("Enter the starting number:"));
+        let end = parseInt(prompt("Enter the ending number:"));
+        let result = "";
+
+        for (let num = start; num <= end; num++) {
+            let numStr = num.toString();
+            let digits = numStr.length;
+            let sum = 0;
+
+            for (let i = 0; i < digits; i++) {
+                let digit = parseInt(numStr[i]);
+                sum += Math.pow(digit, digits);
+            }
+
+            if (sum === num) {
+                result += num + " ";
+            }
+        }
+
+        if (result === "") {
+            alert("No Armstrong numbers found in the given interval.");
+        } else {
+            alert("Armstrong numbers between " + start + " and " + end + ": " + result);
+        }
+    </script>
+</body>
+</html>

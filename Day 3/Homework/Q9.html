@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Program to Generate a Random Number</title>
+</head>
+<body>
+    <h2>Random Number Generator</h2>
+    <script>
+        let min = parseInt(prompt("Enter minimum number"));
+        let max = parseInt(prompt("Enter maximum number"));
+        let b = Math.floor(Math.random() * (max - min + 1)) + min;
+        alert("The random variable is " + b);
+    </script>
+</body>
+</html>
