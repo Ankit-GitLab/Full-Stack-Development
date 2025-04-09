@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Same Last Digit Checker</title>
+</head>
+<body>
+    <h2>Same Last Digit Checker</h2>
+
+    <script>
+        
+        let num1 = parseInt(prompt("Enter first number:"));
+        let num2 = parseInt(prompt("Enter second number:"));
+        let num3 = parseInt(prompt("Enter third number:"));
+
+        
+        let last1 = num1 % 10;
+        let last2 = num2 % 10;
+        let last3 = num3 % 10;
+
+        
+        if (last1 === last2 || last1 === last3 || last2 === last3) {
+            alert("Yes, same last digit found.");
+        } else {
+            alert("No, all last digits are different.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LCM Finder</title>
+</head>
+<body>
+    <h2>Find LCM of Two Numbers</h2>
+
+    <script>
+        // Take input using prompt
+        let num1 = parseInt(prompt("Enter first number:"));
+        let num2 = parseInt(prompt("Enter second number:"));
+
+        // Find maximum of the two numbers
+        let max = (num1 > num2) ? num1 : num2;
+
+        while (true) {
+            if (max % num1 === 0 && max % num2 === 0) {
+                alert("LCM of "+num1+" and "+num2+" is "+max);
+                break;
+            }
+            max++;
+        }
+    </script>
+</body>
+</html>

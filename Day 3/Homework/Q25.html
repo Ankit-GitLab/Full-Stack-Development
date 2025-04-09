@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factors Finder</title>
+</head>
+<body>
+    <h2>Find Factors of a Number</h2>
+
+    <script>
+        
+        let num = parseInt(prompt("Enter a number:"));
+        let factors = "";
+
+        
+        for (let i = 1; i <= num; i++) {
+            if (num % i === 0) {
+                factors += i + " ";
+            }
+        }
+
+        
+        alert("Factors of " + num + " are: " + factors);
+    </script>
+</body>
+</html>

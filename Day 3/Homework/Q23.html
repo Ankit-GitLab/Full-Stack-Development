@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HCF (GCD) Finder</title>
+</head>
+<body>
+    <h2>Find HCF (GCD) of Two Numbers</h2>
+
+    <script>
+        
+        let num1 = parseInt(prompt("Enter first number:"));
+        let num2 = parseInt(prompt("Enter second number:"));
+
+        let a = num1;
+        let b = num2;
+
+       
+        while (b !== 0) {
+            let temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+       
+        alert("HCF (GCD) of "+num1+" and "+num2+" is "+a);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Armstrong Number Checker</title>
+</head>
+<body>
+    <h2>Armstrong Number Checker</h2>
+
+    <script>
+        let num = prompt("Enter a number:");
+        let originalNum = parseInt(num);
+        let sum = 0;
+        let digits = num.length;
+
+        for (let i = 0; i < digits; i++) {
+            let digit = parseInt(num[i]);
+            sum += Math.pow(digit, digits);
+        }
+
+        if (sum === originalNum) {
+            alert(originalNum + " is an Armstrong Number!");
+        } else {
+            alert(originalNum + " is NOT an Armstrong Number.");
+        }
+    </script>
+</body>
+</html>
