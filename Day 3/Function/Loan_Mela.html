@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    choice = prompt("Welcome to the Loan Mela "+
+        "\n"+"Enter 1 for Personal Loan " + "\n" +
+        "Enter 2 for Education Loan" + "\n" + "Enter 3 for Exit"
+    )
+
+    if(choice == 1 ){
+        salary = prompt("Please Enter your Current Salary : ")
+        if(salary>=500){
+            alert("You are eligible for " + "$" + salary*5 )
+
+        }
+        else{
+        alert("Sorry! You are not eligible ")
+        }
+    }
+    else if(choice == 2){
+        percentage = prompt("Please enter your Class 12th Percentage ")
+        if(percentage >= 70){
+            req = prompt("Please enter your required loan ");
+            alert("your education loan approved ")
+        }
+        else{
+            alert("sorry! this is not for you")
+        }
+    }
+    else{
+        alert("exit");
+    }
+</script>
+</html>

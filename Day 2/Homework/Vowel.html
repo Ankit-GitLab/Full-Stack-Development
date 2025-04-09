@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vowel and Consonant Counter</title>
+</head>
+<body>
+  <h2>Vowel & Consonant Counter</h2>
+  <input type="text" id="textInput" placeholder="Type something...">
+  <button onclick="countCharacters()">Count</button>
+
+  <p id="result"></p>
+
+  <script>
+    function countCharacters() {
+      let str = document.getElementById("textInput").value.toLowerCase();
+      let vowels = "aeiou";
+      let vowelCount = 0, consonantCount = 0;
+
+      for (let i = 0; i < str.length; i++) {
+        let ch = str[i];
+        if (/[a-z]/.test(ch)) { // check only alphabet characters
+          if (vowels.includes(ch)) {
+            vowelCount++;
+          } else {
+            consonantCount++;
+          }
+        }
+      }
+
+      document.getElementById("result").innerHTML =
+        "Vowels: " + vowelCount + "<br>Consonants: " + consonantCount;
+    }
+  </script>
+</body>
+</html>
+

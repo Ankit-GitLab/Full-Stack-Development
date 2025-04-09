@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leap Year Checker</title>
+</head>
+<body>
+    <h2>Leap Year Checker</h2>
+
+    <p id="result"></p>
+
+    <script>
+         year=prompt("Enter the a number")
+
+        if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+            result = year + " is a Leap Year.";
+        } else {
+            result = year + " is NOT a Leap Year.";
+        }
+            alert(result);
+    </script>
+</body>
+</html>

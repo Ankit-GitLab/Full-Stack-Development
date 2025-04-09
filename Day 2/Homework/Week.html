@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day of Week</title>
+</head>
+<body>
+    <h2>Find Day of the Week</h2>
+
+    <p id="dayResult"></p>
+
+    <script>
+        let dayNumber = 3; // 1 = Sunday, 2 = Monday, ..., 7 = Saturday
+        let dayName = "";
+
+        switch(dayNumber) {
+            case 1:
+                dayName = "Sunday";
+                break;
+            case 2:
+                dayName = "Monday";
+                break;
+            case 3:
+                dayName = "Tuesday";
+                break;
+            case 4:
+                dayName = "Wednesday";
+                break;
+            case 5:
+                dayName = "Thursday";
+                break;
+            case 6:
+                dayName = "Friday";
+                break;
+            case 7:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Invalid day number!";
+        }
+
+        document.getElementById("dayResult").innerText = "Day " + dayNumber + " is " + dayName;
+    </script>
+</body>
+</html>
