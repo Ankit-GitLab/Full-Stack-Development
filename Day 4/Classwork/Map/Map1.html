@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Key values of mapping -->
+    <p id="demo"></p>
+    <script>
+        const fruits = new Map([
+            ["apples",500],
+            ["bananas",300],
+            ["oranges",400]
+        ]);
+        let numb = fruits.get("apples");
+        document.getElementById("demo").innerHTML= "There are "+numb+" apples.";
+    </script>
+</body>
+</html>

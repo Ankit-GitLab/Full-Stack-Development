@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var map = new Map();
+        map.set(1, "jQuery");
+        map.set(2, "AngularJS");
+        map.set(3, "BoostStrap");
+
+        var itr = map.keys();  
+
+        document.writeln(itr.next().value + "<br>");
+        document.writeln(itr.next().value + "<br>");
+        document.writeln(itr.next().value);
+    </script>
+</body>
+</html>

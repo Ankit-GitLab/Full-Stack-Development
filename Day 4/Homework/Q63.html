@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Format Date</title></head>
+<body>
+<h2> Format the Date</h2>
+<script>
+let date = new Date();
+let formatted = date.toLocaleDateString('en-IN', {
+  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+});
+console.log("Formatted Date: ", formatted);
+</script>
+</body>
+</html>

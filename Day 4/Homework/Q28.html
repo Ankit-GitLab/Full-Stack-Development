@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Shuffle Deck of Cards</title></head>
+<body>
+<h3>Shuffle Deck of Cards</h3>
+<script>
+let suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+let values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+let deck = [];
+
+for (let suit of suits) {
+    for (let value of values) {
+        deck.push(`${value} of ${suit}`);
+    }
+}
+
+deck.sort(() => Math.random() - 0.5);
+document.write("Shuffled Deck:<br>" + deck.join("<br>"));
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Format Number as Currency</title></head>
+<body>
+<h2> Format Number as Currency String</h2>
+<script>
+let amount = 123456.789;
+let formatted = amount.toLocaleString('en-IN', { style: 'currency', currency: 'INR' });
+console.log(formatted); // ₹1,23,456.79
+</script>
+</body>
+</html>

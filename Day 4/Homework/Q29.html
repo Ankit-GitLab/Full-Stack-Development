@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Fibonacci Using Recursion</title></head>
+<body>
+<h3>Fibonacci Sequence Using Recursion</h3>
+<script>
+function fibonacci(n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+let n = 7;
+document.write("Fibonacci sequence:<br>");
+for (let i = 0; i < n; i++) {
+    document.write(fibonacci(i) + "<br>");
+}
+</script>
+</body>
+</html>

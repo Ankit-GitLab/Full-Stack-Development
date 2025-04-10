@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Countdown Timer</title></head>
+<body>
+<h2> Countdown Timer</h2>
+<div id="timer"></div>
+<script>
+let timeLeft = 10;
+let timer = setInterval(() => {
+  document.getElementById("timer").innerText = "Time Left: " + timeLeft + " seconds";
+  timeLeft--;
+  if (timeLeft < 0) {
+    clearInterval(timer);
+    document.getElementById("timer").innerText = "Time's up!";
+  }
+}, 1000);
+</script>
+</body>
+</html>

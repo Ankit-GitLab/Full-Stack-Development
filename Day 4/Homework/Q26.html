@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sum of Natural Numbers</title></head>
+<body>
+<h3>Sum of Natural Numbers Using Recursion</h3>
+<script>
+function sum(n) {
+    if (n === 0) return 0;
+    return n + sum(n - 1);
+}
+let n = 10;
+document.write("Sum of first " + n + " natural numbers is: " + sum(n));
+</script>
+</body>
+</html>

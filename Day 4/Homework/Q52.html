@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Generate Random String</title></head>
+<body>
+<h2> Generate Random String</h2>
+<script>
+function generateRandomString(length) {
+  let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+console.log(generateRandomString(10));
+</script>
+</body>
+</html>

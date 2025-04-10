@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Create Objects</h3>
+<script>
+// Object literal
+let obj1 = { name: "Jack", age: 21 };
+
+// Constructor
+let obj2 = new Object();
+obj2.name = "John";
+obj2.age = 25;
+
+// Using class
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+let obj3 = new Person("Alice", 30);
+
+console.log(obj1);
+console.log(obj2);
+console.log(obj3);
+</script>
+</body>
+</html>

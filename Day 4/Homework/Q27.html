@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Guess a Number</title></head>
+<body>
+<h3>Guess a Random Number</h3>
+<script>
+let random = Math.floor(Math.random() * 10) + 1;
+let guess = prompt("Guess a number between 1 and 10:");
+if (parseInt(guess) === random) {
+    alert("Correct!");
+} else {
+    alert("Wrong! The number was " + random);
+}
+</script>
+</body>
+</html>
