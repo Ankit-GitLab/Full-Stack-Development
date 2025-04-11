@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paytm Clone</title>
+</head>
+<body>
+  <h2>Paytm</h2>
+  <input type="text" id="account" placeholder="Enter Account Number" />
+  <button onclick="validateAccount()">Submit</button>
+
+  <script>
+    function validateAccount() {
+      let accNo = document.getElementById("account").value;
+      let correctAccNo = "123456"; 
+
+      if (accNo === correctAccNo) {
+        let otp = "5678";
+        alert("Your OTP is: " + otp);
+
+        let userOtp = prompt("Enter OTP:");
+        if (userOtp === otp) {
+          let amount = prompt("Enter Amount to Transfer:");
+          if (parseFloat(amount) >= 1) {
+            alert("Transaction OK");
+          } else {
+            alert("Sorry, amount must be at least 1");
+          }
+        } else {
+          alert("Wrong OTP");
+        }
+      } else {
+        alert("Invalid Account Number");
+      }
+    }
+  </script>
+</body>
+</html>

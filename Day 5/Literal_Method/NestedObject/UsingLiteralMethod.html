@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1>JavaScript Object Properties</h1>
+<h2>Accessing a Property with an Expression</h2>
+
+<p id="demo"></p>
+
+<script>
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  age      :  50,
+  eyecolor: "blue"
+};
+
+person.nationality = "English";
+document.getElementById("demo").innerHTML =
+ person.firstName + " is " + person.nationality + " years old.";
+</script>
+
+</body>
+</html>

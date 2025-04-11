@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Object</title>
+</head>
+<body>
+    <h1>javaScript Object</h1>
+    <h2>Accessing Nested Object</h2>
+    <p id="demo"></p>
+    <script>
+        const myObj={
+            name:"John",
+            age:30,
+            myCars:{
+                car1:"Ford",
+                car2:"BMW",
+                car3:"PORSE"
+            }
+        }
+        document.getElementById("demo").innerHTML=myObj.myCars.car2;
+    </script>
+
+</body>
+</html>

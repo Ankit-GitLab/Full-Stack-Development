@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1>JavaScript Object Properties</h1>
+<h2>Accessing a Property with an Expression</h2>
+
+<p id="demo"></p>
+
+<script>
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  age      :  50
+};
+
+let x = "firstName";
+let y = "age";
+document.getElementById("demo").innerHTML = person[x] + " is " + person[y] + " years old.";
+</script>
+
+</body>
+</html>
