@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <script>
+        function calculator(a,operator, b) {
+    let result;
+
+    if (operator === '+') {
+        result = a + b;
+    } else if (operator === '-') {
+        result = a - b;
+    } else if (operator === '*') {
+        result = a * b;
+    } else if (operator === '/') {
+        if (b !== 0) {
+            result = a / b;
+        } else {
+            return "Error: Divide by zero";
+        }
+    } else {
+        return "Invalid operator";
+    }
+
+    return result;
+}
+
+a=prompt("Enter frist number")
+operator=prompt("Enter your operator  like(+,-,*,/) ")
+b=prompt("Enter second number ")
+
+
+let result = calculator(a,operator,b);
+alert("Your answer is : "+result)
+    </script>
+</body>
+</html>
