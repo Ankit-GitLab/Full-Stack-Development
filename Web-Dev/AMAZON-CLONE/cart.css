@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    background-color: #676b6b
+}
+
+h1 {
+    width: 100%;
+    height: 4rem;
+    background: #535252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+#cart {
+    background-color: rgb(100, 94, 94);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+#cart p {
+    font-size: 40px;
+}
+
+#cart a {
+    color: white;
+}

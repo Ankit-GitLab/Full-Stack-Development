@@ -1,0 +1,60 @@
+
+        *{
+            font-family: "Bungee Spice", sans-serif;
+        }
+        .parent:hover{
+            background-color:magenta;
+        }
+        .parent{
+            background-color: rgb(203, 132, 132);
+            display: flex;
+         
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* margin: 10px; */
+
+        }
+        .childOne:hover{
+            background-color: rgb(18, 183, 35);
+            transform: scale(1.4);
+            transition: 3s ease-in-out;
+        }
+        .childOne{
+            width: 500px;
+            height: 400px;
+            background-color: aqua;
+        }
+        .childTwo:hover{
+            background-color: black;
+            transform: scale(1.4);
+            transition: 3s ease-in-out;
+        }
+        .childTwo{
+            width: 500px;
+            height: 400px;
+            background-color: rgb(145, 216, 22);
+        }
+        .navber{
+            display: flex;
+            height: 10vh;
+            align-items: center;
+            padding: 0 100px;
+        }
+        .logo{
+            flex: 1;
+        }
+        .menus{
+            flex: 3;
+            
+        }
+        .menus ul{
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+            list-style-type: none;
+            
+        }
+        .menus ul li a{
+            text-decoration: none;
+        }

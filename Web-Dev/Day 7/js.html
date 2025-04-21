@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Box</title>
+    <style>
+        #colorBox {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(255, 0, 230);
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Square Box with Changing Colors</h1>
+    <div id="colorBox"></div>
+    <script>
+        const colorBox = document.getElementById('colorBox');
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        setInterval(() => {
+            const newColor = getRandomColor();
+            colorBox.style.backgroundColor = newColor;
+        }, 5000);
+    </script>
+</body>
+</html>

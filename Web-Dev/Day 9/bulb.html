@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibility Check with Bulb</title>
+    <style>
+        .A {
+            padding: 20px 20px;
+            position: relative;
+            left: 800px;
+            bottom: -200px;
+            font-family: cursive;
+            text-align: center;
+        }
+        #bulb {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            border-radius: 50%;
+           border-color: black;
+           box-shadow: black;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="A">
+        <h1 id="check">Check your eligibility!</h1>
+        <div id="bulb"></div>
+        <button onclick="checkAge()">Check your age!</button>
+    </div>
+
+    <script>
+        const checkAge = () => {
+            let age = window.prompt("Please enter your age!: ");
+            let check = document.getElementById("check");
+            let bulb = document.getElementById("bulb");
+
+            age = parseInt(age);
+
+            if (age >= 18) {
+                check.innerHTML = "You are eligible to vote!";
+                bulb.style.backgroundColor = "green"; 
+            } else if (age < 18) {
+                check.innerHTML = "You are not eligible to vote.";
+                bulb.style.backgroundColor = "red";
+            } else {
+                check.innerHTML = "Please enter a valid age.";
+                bulb.style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+</body>
+</html>

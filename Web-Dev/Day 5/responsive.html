@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox</title>
+
+<style>
+    /* Parent Container Styling */
+    .parent {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center; /* Center-align children for better aesthetics */
+    }
+
+    /* Common Child Styling */
+    .parent .child {
+        height: 600px;
+        width: 600px;
+        background-image: url(https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* Medium Screen Responsive Styling */
+    @media (max-width: 1028px) {
+        .parent .child {
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    /* Small Screen Responsive Styling */
+    @media (max-width: 543px) {
+        .parent .child {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%; /* Make elements circular */
+        }
+    }
+</style>
+
+</head>
+<body>
+    <!-- Parent Container -->
+    <div class="parent">
+        <!-- Child Elements -->
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>

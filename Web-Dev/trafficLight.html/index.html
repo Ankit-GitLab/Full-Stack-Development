@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #box{
+            height: 300px;
+            width: 300px;
+            background-color: gray;
+            box-shadow: 10px 10px 100px 20px gray;
+            border-radius: 50%;
+            border: 5px solid black;
+         
+        }
+        .section{
+           gap: 30pxhmm;
+
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 100px;
+        }
+    </style>
+</head>
+<body><center>
+    <div class="section">
+    <div id="box" draggable="true" style="box-shadow: red 10px 10px 100px 10px; background-color: grey;">
+            
+    </div><br>
+    <div id="box" class="sunTwo" draggable="true" style="box-shadow: yellow 10px 10px 100px 10px; background-color: grey;">
+            
+    </div><br>
+    <div id="box" class="sunThree" draggable="true" style="box-shadow: green 10px 10px 100px 10px; background-color: grey;">
+            
+    </div></center>
+
+   
+</div>
+
+    <script>
+    const sunLight=()=>{
+        let sun=document.getElementById('box')
+        let sunTwo=document.getElementsByClassName('sunTwo')[0]
+        let sunThree=document.getElementsByClassName('sunThree')[0]
+
+        sun.addEventListener("mouseenter",()=>{
+        sun.style.boxShadow="10px 10px 100px 10px red";
+        sun.style.backgroundColor="red";
+        })
+
+        sun.addEventListener("dragleave",()=>{
+        sun.style.boxShadow="10px 10px 100px 10px gray";
+        sun.style.backgroundColor="gray";
+        })
+
+        // sun two
+        sunTwo.addEventListener("mouseenter",()=>{
+        sunTwo.style.boxShadow="10px 10px 100px 10px yellow";
+        sunTwo.style.backgroundColor="yellow";
+        })
+
+         // sun three
+         sunThree.addEventListener("mouseenter",()=>{
+        sunThree.style.boxShadow="10px 10px 100px 10px green";
+        sunThree.style.backgroundColor="green";
+        })
+       
+    
+    }
+    sunLight()
+</script>
+</body>
+</html>

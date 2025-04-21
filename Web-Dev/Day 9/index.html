@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .A {
+            padding: 70px 70px;
+            position:relative;
+            left: 700px;
+            bottom: -400px;
+            font-family:cursive
+        }
+    </style>
+</head>
+<body>
+    <div class="A">
+        <h1 id="check">Check your eligibility!</h1>
+        <button onclick="checkAge()">Check your age</button>
+    </div>
+
+    <script>
+        const checkAge = () => {
+            let age = window.prompt("Please enter your age: ");
+            let check = document.getElementById("check");
+
+            // Parse the input to ensure it's treated as a number
+            age = parseInt(age);
+
+            if (age >= 18) {
+                check.innerHTML = "You are eligible to vote!";
+            } else if (age > 0) {
+                check.innerHTML = "You are not eligible to vote.";
+            } else {
+                check.innerHTML = "Please enter a valid age.";
+            }
+        }
+    </script>
+</body>
+</html>

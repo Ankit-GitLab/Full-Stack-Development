@@ -1,0 +1,73 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000;
+}
+
+.fireplace-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fireplace {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    text-align: center;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+/* Text overlay styles */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.text-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.text-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e63e00;
+    transform: scale(1.1);
+}

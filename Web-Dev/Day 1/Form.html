@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Application Form</title>
+</head>
+<style>
+body colo{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #100f12;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #121111;
+}
+
+input, textarea, button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #0d0b0b;
+    border-radius: 4px;
+    outline: none;
+}
+
+textarea {
+  
+    height: 80px;
+}
+
+input[type="date"] {
+    padding: 5px;
+}
+
+.contact-fields {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #7e84a5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+body{
+    background-color: #4740aa;
+}
+.form-container{
+    background-color: rgb(88, 150, 117);
+}
+
+</style>
+<body>
+    <div  class="form-container">
+        
+        <h1 style="color: aqua;">Application Form</h1>
+        <form>
+            <label for="organization">Organization</label>
+            <input type="text" id="organization" name="organization" >
+
+            <label for="main-contact">Main Contact</label>
+            <div class="contact-fields">
+                <input type="text" id="first-name" name="first-name" placeholder="First">
+                <input type="text" id="last-name" name="last-name" placeholder="Last">
+            </div>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+
+            <label for="rental-request">Please provide a brief description of your rental request</label>
+            <textarea id="rental-request" name="rental-request" placeholder=""></textarea>
+
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" name="start-date">
+
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" name="end-date">
+
+        </form>
+    </div>
+</body>
+</html>

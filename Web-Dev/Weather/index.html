@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Weather</title>
+    <style>
+        body{
+            background-color: rgb(72, 174, 208);
+            color: white;
+            align-items: center;
+            background-image: url(https://i.pinimg.com/736x/11/2d/65/112d65eccb062c09e7a46504ec744f08.jpg);
+            background-size: 100%;
+            padding-left:100px ;
+        }
+        .weather{
+            
+            margin-top: 200px;
+            margin-left: 540px;
+            font-size: 24px;
+            width: 600px;
+            border-radius: 30px;
+            text-align: center;
+            backdrop-filter: blur(18px);
+            border:5px solid white;
+            box-shadow: 10px 10px;
+            box-shadow: 0px 0px 10px 10px; 
+        }
+    </style>
+</head>
+<body>
+  <div class="weather">
+        <h1>WEATHER APPLICATION</h1>
+        <h2>What is the Climate in your city</h2>
+        <form action="" class="searchform" id="searchform">
+            <input 
+                type="search"
+                placeholder="Enter the Name of the City"
+                class="search-input"
+                id="cityInput"
+                value=""
+            >
+            <button type="submit" class="search button">Search</button>
+        </form>
+
+        <p id="loadingmessage" style="display: none; text-align: center;">loading...</p>
+        <p id="errormessage" class="error-message" style="display: none;"></p>
+        <div id="weatherDetails" class="weather-Details" style="display: none;"></div>
+    </div>
+
+    <script>
+        const searchform = document.getElementById('searchform')
+        const cityInput = document.getElementById('cityInput')
+        const loadingmessage =document.getElementById('loadingmessage')
+        const errormessage =document.getElementById('errormessage')
+        const weatherDetails =document.getElementById('weatherDetails')
+
+        const fetchweather = async (city) => {
+            try{
+                loadingmessage.style.display = 'block'
+                errormessage.style.display = 'none'
+                weatherDetails.style.display = 'none'
+
+                const response = await fetch(`
+                    https://api.weatherapi.com/v1/current.json?key=70744383a6374890b0954559240912&q=${city}&aqi=no
+                `)
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data')
+                }
+
+                const data = await response.json()
+                console.log(data)
+                displayWeather(data)
+            } catch (err) {
+                errormessage.textContent = 'Failed to fetch weather data. Please check the city name is correct.'
+                errormessage.style.display = 'block'
+            } finally{
+                loadingmessage.style.display = 'none'
+            }
+        }
+
+        const displayWeather = (data) => {
+            weatherDetails.innerHTML = `
+            <h3>Weather in ${data.location.name}, ${data.location.region}, ${data.location.country}</h3>
+            <p>Temperature: ${data.current.temp_c}°C</p>
+            <p>Condition: ${data.current.condition.text}</p>
+             <p><strong>Humidity:</strong> ${data.current.humidity}%</p>
+                <p><strong>Wind speed:</strong> ${data.current.wind_kph}kph</p>
+            <img src="${data.current.condition.icon}" alt="${data.current.condition.text}">`
+                weatherDetails.style.display = 'block';
+        }
+        searchform.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const city = cityInput.value.trim()
+            if(city) {
+                fetchweather(city)
+            }
+        })
+
+        fetchweather('Uttar Pradesh')
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Components</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fbff00 0%, #6610f2 100%);
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 1.5em;
+      margin: 0 0 10px;
+      color: #333;
+    }
+    .card-description {
+      font-size: 1em;
+      color: #666;
+      margin: 0 0 20px;
+    }
+    .card-button {
+      display: block;
+      text-align: center;
+      background: black;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .card-button:hover {
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="cards-container">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/19798457/pexels-photo-19798457/free-photo-of-mercedes-benz-g-class-on-street-of-london-england.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="G-Wagon">
+      <div class="card-content">
+        <h2 class="card-title">Mercedes-Benz</h2>
+        <p class="card-description">The Mercedes-Benz G-Class, colloquially known as the G-Wagon, is a luxury SUV originally developed as a military off-roader.</p>
+        <a href="#" class="card-button">About G-Wagon</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/9643708/pexels-photo-9643708.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Porsche 911">
+      <div class="card-content">
+        <h2 class="card-title">Porsche 911</h2>
+        <p class="card-description">The Porsche 911 is a high-performance sports car that has become a symbol of automotive excellence and engineering brilliance.</p>
+        <a href="#" class="card-button">About Porsche 911</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Ferrari">
+      <div class="card-content">
+        <h2 class="card-title">Ferrari</h2>
+        <p class="card-description">Ferrari is an iconic Italian brand known for its luxury sports cars, symbolizing speed and sophistication worldwide.</p>
+        <a href="#" class="card-button">About Ferrari</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
